@@ -1,0 +1,14 @@
+name: SaveMeBackup
+main: com.osher.minecraft.undo.UndoPlugin
+version: 1.0
+commands:
+   savemebackup:
+      description: Run Backup
+      usage: /savemebackup hourly|daily
+      permission: UndoPlugin.MakeUndo
+      permission-message: You don't have backup permission
+
+permissions:
+   UndoPlugin.MakeUndo:
+      description: Run backup on demand
+      default: op

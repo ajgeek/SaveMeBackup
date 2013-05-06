@@ -1,0 +1,17 @@
+save: save/saveme-hourly.zip
+keep: 3
+frequency: 60m
+saveday: save/saveme-daily.zip
+keepday: 3
+daily-at: "12:15:00"
+files:
+  - white-list.txt
+  - ops.txt
+  - banned-players.txt
+  - banned-ips.txt
+folders:
+  - plugins/Essentials
+  - plugins/PluginMetrics
+  - world
+  - world_nether
+  - world_the_end
