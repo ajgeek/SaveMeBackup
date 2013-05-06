@@ -1,0 +1,38 @@
+Backup for minecraft.
+Supports daily and hourly backups.
+Daily at a specified time (GMT) and hourly on a schedule.
+Copies are kept on a rolling basis.
+Each backup contains the files and folders included in the config.
+
+Can also be run from the console or as an op player.
+    /savemebackup hourly|daily
+
+When run it forces a save and disables autosave.
+Autosave is turned back on after completion.
+
+Sample config:
+
+save: save/saveme-hourly.zip            # Name of hourly save file
+keep: 3                                 # Number of histories to keep of the hourly (.1, .2, .3 in this example)
+frequency: 60m                          # Hourly frequency (###s, ###m, ###h supported)
+saveday: save/saveme-daily.zip          # Daily save file
+keepday: 3                              # Number of daily histories to keep
+daily-at: "12:15:00"                    # Daily schedule, in GMT.  This is actually managed as tics from the server startup
+files:                                  # Specific files to include in the backup
+  - white-list.txt
+  - ops.txt
+  - banned-players.txt
+  - banned-ips.txt
+folders:                                # Specific folders to include in the backup
+  - plugins/Essentials
+  - plugins/PluginMetrics
+  - world
+  - world_nether
+  - world_the_end
+
+
+Building:
+You will need craftbukkit-1.2.5-R5.0.jar or later.
+
+
+This file was modified by IntelliJ IDEA 12.1.2 for binding GitHub repository
