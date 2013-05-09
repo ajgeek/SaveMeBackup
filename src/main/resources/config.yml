@@ -1,14 +1,25 @@
+#Save Me Backup Config
+#Appache 2.0 Licenece
+#
+#Name and directory to save interval backups
 save: save/saveme-hourly.zip
+#Amount if interval backups to keep at once 
 keep: 3
+#How often to do interval backups in s, h, m
 frequency: 60m
+#Name and directory for daily backups
 saveday: save/saveme-daily.zip
+#How many daily backups to keep at once
 keepday: 3
+#When tk do daily backups
 daily-at: "12:15:00"
+#Individual files to backup
 files:
   - white-list.txt
   - ops.txt
   - banned-players.txt
   - banned-ips.txt
+#Directories to backup(includes all files inside)
 folders:
   - plugins/Essentials
   - plugins/PluginMetrics
